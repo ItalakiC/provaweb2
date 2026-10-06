@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Indice - Loja de Jogos</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+            <link href="../css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+
+    <header class="masthead">
+        <h2 class="logo">Loja de Games</h2>
+        <nav>
+            <ul>
+                <li>Perifericos</li>
+                <li>Jogos Físicos</li>
+                <li>Acessórios</li>
+                <li>Consoles</li>
+                <li><a href="carrinho.html">Carrinho <span class="menu" id="contadorCarrinho">0</span></a></li>
+                <li><button type="button" id="botaoTema" class="botao-tema">🌗 Tema</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="cat-jogos">
+            <div class="hero-conteudo">
+                <span class="tag">Semana do Consumidor</span>
+                <h1>Veja todas as ofertas</h1>
+                <p>Jogos e consoles na promoção</p>
+            </div>
+        </section>
+
+        <section id="noticias-header">
+            <input type="search" id="busca-nome" placeholder="Buscar pelo título...">
+            <div class="filtros" role="group">
+                <button type="button" class="filtro ativo" data-filtro="todas" id="botaoTodas">Todas</button>
+                <button type="button" class="filtro cat-jogos" data-filtro="Jogos Físicos" id="botaoJogos">Jogos Fisicos</button>
+                <button type="button" class="filtro cat-perif" data-filtro="Perifericos" id="botaoPerif">Perifericos</button>
+                <button type="button" class="filtro cat-consoles" data-filtro="Consoles" id="botaoConsoles">Consoles</button>
+                <button type="button" class="filtro cat-acessorios" data-filtro="Acessórios" id="botaoAcesso">Acessórios</button>
+            </div>
+        </section>
+
+        <section id="lista-noticias">
+            <article class="bloco-produto cat-jogos" data-categoria="Jogos Físicos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Jogos</span><h5>Elden Ring</h5>
+                    <p>R$200</p></div>
+            </article>
+            <article class="bloco-produto cat-perif" data-categoria="Perifericos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Perifericos</span><h5>Controle</h5>
+                    <p>R$250</p></div>
+            </article>
+            <article class="bloco-produto cat-perif" data-categoria="Perifericos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Perifericos</span><h5>Fone de Ouvido</h5>
+                    <p>R$100</p></div>
+            </article>
+            <article class="bloco-produto cat-consoles" data-categoria="Consoles">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Consoles</span><h5>PS5</h5>
+                    <p>R$3000</p></div>
+            </article>
+            <article class="bloco-produto cat-acessorios" data-categoria="Acessórios">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Acessórios</span><h5>Borracha de analogico</h5>
+                    <p>R$20</p></div>
+            </article>
+            <article class="bloco-produto cat-jogos" data-categoria="Jogos Físicos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Jogos</span><h5>Wolverine</h5>
+                    <p>R$400</p></div>
+            </article>
+            <article class="bloco-produto cat-acessorios" data-categoria="Acessórios">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Acessórios</span><h5>Apoio de Controle</h5>
+                    <p>R$60</p></div>
+            </article>
+            <article class="bloco-produto cat-consoles" data-categoria="Consoles">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Consoles</span><h5>Switch 2</h5>
+                    <p>R$3500</p></div>
+            </article>
+        </section>
+
+        <p id="sem-resultado" hidden>Nenhum Produto encontrada. Tente outro título ou categoria.</p>
+
+        <aside id="newsletter">
+            <h3>Receba ofertas por e-mail</h3>
+            <form id="formEmail">
+                <input type="text" id="email" placeholder="seuemail@gmail.com" autocomplete="email">
+                <button type="submit" class="botao-principal">Receber notificações</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer class="rodape">
+        &copy; 2026 Loja de Games - Italo
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

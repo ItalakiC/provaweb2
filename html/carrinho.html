@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrinho - Página de Restaurante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Fredoka:wght@300..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Fredoka:wght@300..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <header>
+        <h1>Loja de Games</h1>
+        <li><button type="button" id="botaoTema" class="botao-tema">🌗 Tema</button></li>
+    </header>
+
+    <main>
+        <ul>
+            <li><a href="index.html">Loja de Games</a></li>
+            <li><a href="carrinho.html">Carrinho <span id="contadorCarrinho">0</span></a></li>
+        </ul>
+
+        <div>
+            <div>
+                <h5 >Itens do carrinho</h5>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Subtotal</th>
+                                <t>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <p id="vazioCarrinho">O carrinho está vazio. Volte á loja para adicionar produtos.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h5>Finalizar pedido</h5>
+                <div id="erroPedido" role="alert"></div>
+                <form id="formPedido" novalidate>
+                    <div>
+                        <div>
+                            <label for="nomeCliente">Nome</label>
+                            <input type="text" id="nomeCliente">
+                        </div>
+                        <div>
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="text" id="telefone">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between"><span>Subtotal</span><span id="subtotal"></span></div>
+                    <div class="d-flex justify-content-between"><span>Taxa de entrega</span><span id="taxaEntrega"></span></div>
+                    <p>Valor Total: <span id="valorTotal"></span></p>
+
+                    <button type="submit" class="btn btn-primary mt-3 w-100">Finalizar pedido</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalPedido" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pedido realizado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body" id="resumoPedido"></div>
+                <div class="modal-footer">
+                    <button type="button" class="botaoFechar">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class = "rodape">
+        &copy; Loja de Games - Fins Acadêmicos Italo 2026
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/models.js"></script>
+    <script src="../js/carrinho.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+:root {
+    --cor-primaria: #5345a0;
+    --cor-primaria-hover: #4e3591;
+    --cor-prata: #c0c4c9;
+    --cor-fundo: #F3F5F8;
+    --cor-texto: #1c2733;
+    --cor-texto-claro: #5a6675;
+    --cor-branco: #FFFFFF;
+    --cor-borda: #D3D9E1;
+    --cor-hero: #330f47;
+    --cor-perif: #fdea3c;
+    --cor-jogos: #ed1e1e;
+    --cor-acessorios: #31dfdf;
+    --cor-consoles: #f138c3;
+    --fonte-titulos: 'Newsreader', serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    --cor-fundo: #121212;
+    --cor-texto: #E0E0E0;
+    --cor-texto-claro: #AAAAAA;
+    --cor-branco: #1E1E1E;
+    --cor-borda: #333333;
+    --cor-prata: #8f9aa8;
+    --cor-hero: #330e42;
+}
+
+body.dark-mode #hero,
+body.dark-mode #hero h1,
+body.dark-mode #hero p {
+    color: #FFFFFF;
+}
+
+/* Base */
+body { background: var(--cor-fundo); color: var(--cor-texto); font-family: var(--fonte-texto); }
+main, .masthead { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3, h4, h5, a { font-family: var(--fonte-titulos); }
+button, input { transition: .15s; }
+button { cursor: pointer; }
+input:hover { box-shadow: 0 0 0 3px var(--cor-prata); }
+
+/* Cor por assunto */
+.cat-perif { --cat: var(--cor-perif); }
+.cat-jogos { --cat: var(--cor-jogos); }
+.cat-acessorios { --cat: var(--cor-acessorios); }
+.cat-consoles { --cat: var(--cor-consoles); }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 4px; background: var(--cat); color: #fff; font-size: .8rem; font-weight: 600; }
+
+.masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--cor-primaria); }
+.logo { margin: 0; font-size: 2.4rem; font-weight: 800; color: var(--cor-primaria); }
+.masthead ul { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; list-style: none; margin: 0; padding: 0; color: var(--cor-texto-claro); }
+
+/* Botões */
+.botao-tema { background: none; border: 1px solid var(--cor-prata); color: var(--cor-texto); border-radius: 50px; padding: 4px 12px; }
+.botao-principal { background: var(--cor-primaria); color: #fff; border: 0; border-radius: 50px; padding: 10px 20px; font-weight: 600; }
+.botao-tema:hover, .botao-principal:hover { background: var(--cor-primaria-hover); color: #fff; }
+
+/* Hero e destaques */
+#hero { display: flex; align-items: flex-end; min-height: 340px; margin-top: 24px; padding: 40px; border-radius: 10px; color: #fff; background: linear-gradient(135deg, color-mix(in srgb, var(--cat) 55%, #000), var(--cat)); }
+.hero-conteudo { max-width: 620px; }
+#hero h1 { margin: 12px 0; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 800; }
+#hero p { margin: 0; }
+
+#destaques { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
+.mini { display: flex; align-items: center; gap: 14px; padding: 12px; }
+.mini-img { flex: none; width: 84px; height: 124px; border-radius: 6px; background: var(--cat); }
+.mini h4 { margin: 6px 0 0; font-size: 1.1rem; }
+
+/* Busca e filtros */
+#noticias-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin: 40px 0 20px; }
+#busca { flex: 1 1 220px; max-width: 320px; padding: 8px 14px; border: 1px solid var(--cor-borda); border-radius: 6px; background: var(--cor-branco); color: var(--cor-texto); }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; }
+.filtro { background: var(--cor-branco); color: var(--cor-texto); border: 1px solid var(--cor-prata); border-radius: 20px; padding: 6px 16px; }
+.filtro:hover, .filtro.ativo { background: var(--cat, var(--cor-primaria)); border-color: var(--cat, var(--cor-primaria)); color: #fff; }
+
+/* Cards */
+#lista-noticias { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.mini, .bloco-produto { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 8px; overflow: hidden; }
+.thumb { height: 150px; background: var(--cat); }
+.corpo { padding: 14px 16px 18px; }
+.corpo h5 { margin: 8px 0; }
+.corpo p { margin: 0; color: var(--cor-texto-claro); }
+.centro { text-align: center; margin: 28px 0; }
+#sem-resultado { text-align: center; color: var(--cor-texto-claro); }
+
+/* Newsletter */
+#newsletter { margin: 48px 0; padding: 32px 24px; text-align: center; background: var(--cor-hero); color: #fff; border-radius: 10px; }
+#newsletter form { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+#newsletter input { flex: 1 1 260px; max-width: 380px; padding: 10px 14px; border: 0; border-radius: 6px; }
+#newsletter button { background: var(--cor-prata); color: var(--cor-hero); }
+#newsletter button:hover { background: #fff; color: var(--cor-hero); }
+
+/* Rodapé */
+.rodape { text-align: center; padding: 20px; background: var(--cor-branco); border-top: 1px solid var(--cor-borda); color: var(--cor-texto-claro); }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .masthead { flex-direction: column; align-items: flex-start; }
+    .logo { font-size: 1.9rem; }
+    #hero { min-height: 260px; padding: 24px; }
+}
+
+label.form-label {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--cinza);
+}
+
+.form-control:focus {
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 0 0.2rem rgba(79, 120, 89, 0.2);
+}
+
+.table> :not(caption)>*>* {
+    background: transparent;
+    border-bottom: 1px dashed #d2c9b1;
+    vertical-align: middle;
+}
+
+.table thead th {
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cinza);
+    border-bottom: 2px solid var(--cor-primaria) !important;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(212, 158, 59, 0.08) !important;
+}
+
+.qtd-badge {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    background: rgba(79, 120, 89, 0.12);
+    color: var(--verde-claro);
+    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+}
+
+.acoes button {
+    margin-right: 5px;
+}
